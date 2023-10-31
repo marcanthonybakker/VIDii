@@ -1,19 +1,33 @@
 # Basiswebsite voor Interface en Interactie
 Een mooie basis met mapjes, html, css en js die goed aan elkaar gelinkt zijn.
 
-## dingen om te doen
+## 1. Uitkomst research + feedback
+**Research**
+Ik heb gekeken naar de oudste pop culture iconen die ik ken. En dat heb ik verder onderzocht en genoteerd op mijn mindmap. Ik kwam uit op Gundam, een anime serie dat komt uit 1979 dat wel meer dan 50 shows, films en manga heeft, laat staan de honderden modelkits en andere action figures die zij hebben. Godzilla waarvan de eerste film uitkwam in 1954, totaal heeft het meer dan 33 Japanse films, en de nieuwste komt uit op 3 November 2023. En als laatst heb ik gekeken naar Castlevania, een videogame van 1986, dat in totaal meer dan 30 videogames heeft. Ik had ook nog kort even gekeken naar, Osamu Tezuka, de Walt Disney van Japan, maar dit interesseerde mij wat minder. Dus ik had besloten om in ieder geval dat onderwerp niet te kiezen voor het detail analyse. Al deze vier I.P.'s hebben een grondige geschiedenis waar je genoeg kan detail informatie van kan halen.
 
-- Zet GitHub pages aan (bij Settings).
-- Plak een link naar je GitHub pages in het About blokje (rechtsboven)
-- Maak van je naam in Indeling & Planning excel in Teams een link naar je GitHub repository.
+**Feedback**
+A
 
-GitHub is gelijk een backup, maar is ook wat picky-er over wat mooie code is:
+## 2. Conceptschetsen
+**Research**
+**Feedback**
 
-- Zet je code elke keer als je voortgang hebt geboekt op GitHub (dan heb je een back-up).
-- Test je werk op Github (werkt net anders dan op je eigen computer).
-- Laat een ander je werk op GitHub testen.
+## 3. Concept + feedback
+**Research**
+**Feedback**
 
-Code is best leuk, zeker als het lukt:
+## 4. Details + feedback
+**Research**
+**Feedback**
 
-- Stel vragen als je er naar zelf proberen en zoeken niet uitkomt. 
-- Wacht daar niet te lang (en we helpen je graag verder).
+## 5. Reflectie op ontwerp, code en eigen ontwikkeling
+**Research**
+**Feedback**
+
+## Bronnenlijst
+* https://en.wikipedia.org/wiki/Gundam
+* https://en.wikipedia.org/wiki/Godzilla
+* https://gundam.fandom.com/wiki/Universal_Century
+* https://wikizilla.org/wiki/List_of_Godzilla_movies
+* https://en.wikipedia.org/wiki/Castlevania
+* https://nl.wikipedia.org/wiki/Osamu_Tezuka
