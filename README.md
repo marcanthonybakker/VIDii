@@ -1,4 +1,5 @@
-# Interface en Interactie Mar
+# Interface en Interactie Marc Bakker
+**Doel**
 Een mooie basis met mapjes, html, css en js die goed aan elkaar gelinkt zijn.
 
 **Vorderingen**
