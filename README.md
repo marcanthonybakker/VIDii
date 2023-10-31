@@ -1,5 +1,8 @@
-# Basiswebsite voor Interface en Interactie
+# Interface en Interactie Mar
 Een mooie basis met mapjes, html, css en js die goed aan elkaar gelinkt zijn.
+
+**Vorderingen**
+* A
 
 ## 1. Uitkomst research + feedback
 **Research**
