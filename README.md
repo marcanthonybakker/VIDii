@@ -1,3 +1,5 @@
+![Banner](https://github.com/marcanthonybakker/VIDii/assets/118165939/cb8fd118-3f6b-46d4-91aa-1fbd2b90dff3)
+
 # Interface en Interactie Marc Bakker
 
 ### Doel
@@ -47,3 +49,6 @@ Ik heb als eerst gekeken naar een paar algemene aspecten dat te maken heeft met 
 * https://wikizilla.org/wiki/List_of_Godzilla_movies
 * https://en.wikipedia.org/wiki/Castlevania
 * https://nl.wikipedia.org/wiki/Osamu_Tezuka
+* https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1600,h_1067,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/nxhw31d94e5zvd0t3lu3/GUNDAMFACTORYYOKOHAMAAdmissionTicket-KlookStatiUniti.jpg
+* https://www.japanway.it/wp-content/uploads/2020/07/gy-3-2.png
+* https://gunpla.fandom.com/wiki/MG_MS-06J_Zaku_II_(Ver._2.0)
