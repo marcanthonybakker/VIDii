@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+p{
+    background-color: white;
+    color: black;
+    padding: 5px 20px;
+    font-size: 30px;
+}
+
+p:last-of-type{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+
+img{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+body{
+    background-image: url(../img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw; 
+}
+
+/* Backgrounds */
+
+.achtergrondA{
+    background-image: url(../img/bg2.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.achtergrondB{
+    background-image: url(../img/bg3.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.achtergrondC{
+    background-image: url(../img/bg4.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.achtergrondD{
+    background-image: url(../img/bg5.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.achtergrondE{
+    background-image: url(../img/bg6.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.achtergrondF{
+    background-image: url(../img/bg7.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+.achtergrondG{
+    background-image: url(../img/bg8.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
