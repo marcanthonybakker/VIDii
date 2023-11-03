@@ -100,7 +100,7 @@ main article:nth-of-type(2) {
 
 main article:nth-of-type(2) ul {
 	display: flex;
-	overflow-x: scroll;	
+	overflow: scroll;	
 	align-items: center;
 	scroll-snap-type: x mandatory;
   list-style: none;
@@ -129,7 +129,6 @@ main article:nth-of-type(1) {
 main article:nth-of-type(1) section:first-of-type {
   background: var(--computerScreenBg);
   background: var(--computerScreenBgGradient);
-  
   border-radius: 30% 30% 30% 30% / 15% 15% 15% 15%;
   width: 250px;
   height: 350px;
@@ -204,4 +203,15 @@ footer ul {
 
 main article:nth-of-type(2) img:hover {
   animation:sizeUp 0.2s forwards;
+} */
+
+/* #scroller {
+  overflow: scroll;
+  height: 150px;
+  width: 150px;
+  border: 5px dashed orange;
+}
+
+#output {
+  padding: 1rem 0;
 } */
