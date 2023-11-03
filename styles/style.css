@@ -1,0 +1,233 @@
+/*******************/
+/* OVERIGE BRONNEN */
+/*******************/
+
+/* https://fonts.google.com/specimen/Sometype+Mono */
+
+
+
+
+
+
+/**************/
+/* CSS REMEDY */
+/**************/
+
+/* naar een idee van Jen Simmons */
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin:0;
+}
+
+button:not([disabled]) {
+  cursor:pointer;
+}
+
+img {
+  max-width:100%;
+}
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+  --bgFooter: #2b2b2b;
+  --fontWhite: #eeeeee;
+  --fontBlack: #2b2b2b;
+  --shadowBlack: #2b2b2b7e;
+  --buttonBg: #276c9f;
+  --buttonBgPressed: #305979;
+  --buttonPointerPressed: #838383;
+  --buttonBorder: #4a85b1 #4a85b1 #99a00f #5981a0;
+  --buttonBorderPressed: #376588 #376588 #0c0c01 #376588;
+  --computerBgGradient: linear-gradient(0deg, rgba(205,200,64,1) 0%, rgba(82,197,246,1) 19%, rgba(61,135,167,1) 39%, rgba(39,108,159,1) 100%);
+  --computerScreenBgGradient: linear-gradient(0deg, rgba(37,137,203,1) 0%, rgba(133,225,230,1) 55%, rgba(75,172,214,1) 84%, rgba(37,137,203,1) 100%);
+}
+
+/* Gradient brond: https://cssgradient.io/ */
+
+
+
+
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+
+p {
+  font-family: 'Sometype Mono', monospace;
+  font-size: 1.2em;
+}
+
+h1 {
+  display: none;
+}
+
+
+
+
+
+
+/********/
+/* BODY */
+/********/
+
+body {
+  background-image: url(../images/bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
+/********/
+/* MAIN */
+/********/
+
+main article:nth-of-type(1) {
+  background: var(--computerBgGradient);
+  width: 300px;
+  position: fixed;
+  left: 2em;
+  top: 5em;
+  border-radius: 25% 25% 25% 25% / 12% 12% 0% 0%;
+  border: solid 1px var(--fontWhite);
+  filter: drop-shadow(20px 10px 4px var(--shadowBlack));
+}
+
+main article:nth-of-type(1) section:first-of-type {
+  background: var(--computerScreenBgGradient);
+  border-radius: 30% 30% 30% 30% / 15% 15% 15% 15%;
+  width: 250px;
+  height: 450px;
+  margin: 1.5em 1.5em 1em 1.5em;
+  box-shadow: inset 0 0 10px var(--fontWhite);
+}
+
+main article:nth-of-type(1) ul {
+  list-style: none;
+  margin: 0em 2em 0em 2em;
+  padding-top: 2.5em;
+}
+
+main article:nth-of-type(1) li {
+  margin-top: 1em;
+  color: var(--fontBlack);
+  font-weight: 800;
+}
+
+main article:nth-of-type(1) section:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+}
+
+main article:nth-of-type(1) button {
+  background-color: var(--buttonBg);
+  color: var(--fontWhite);
+  padding: 0.5em;
+  font-size: 2em;
+  margin: 0.5em 0.5em 6em 0.5em;
+  border-radius: 5px;
+  border-color: var(--buttonBorder);
+  border-width: 0.3em;
+}
+
+main article:nth-of-type(1) button:active, main article:nth-of-type(1) button:focus, main article:nth-of-type(1) button:hover {
+  background-color: var(--buttonBgPressed);
+  color: var(--buttonPointerPressed);
+  border-color: var(--buttonBorderPressed);
+}
+
+main article:nth-of-type(2) {
+  margin: 6.2em 0em 4.2em 0em;
+}
+
+main article:nth-of-type(2) ul {
+	display: flex;
+	overflow: scroll;	
+	align-items: center;
+	scroll-snap-type: x mandatory;
+  list-style: none;
+  gap: 15em;
+}
+
+main article:nth-of-type(2) li {
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: center;
+}
+
+main article:nth-of-type(2) li:first-of-type {
+  padding-left: 30em;
+}
+
+main article:nth-of-type(2) li:last-of-type {
+  padding-right: 30em;
+}
+
+main article:nth-of-type(2) img {  
+  min-width: 300px;
+}
+
+
+
+
+
+
+
+
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer {
+  background-color: var(--bgFooter);
+}
+
+footer p {
+  font-size: 0.8em;
+  color: var(--fontWhite);
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-top: 7em;
+  padding: 1em;
+  gap: 1em;
+}
+
+
+
+
+
+/* @keyframes sizeUp {
+  0% {
+    transform:scale(1);
+  }
+  100% {
+    transform:scale(1.1);
+  }
+}
+
+main article:nth-of-type(2) img:hover {
+  animation:sizeUp 0.2s forwards;
+} */
