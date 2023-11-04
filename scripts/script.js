@@ -16,7 +16,18 @@ const liGewicht = document.querySelector("#liGewicht");
 const liPower = document.querySelector("#liPower");
 const liSnelheid = document.querySelector("#liSnelheid");
 
+// Faction img
+const menuButton = document.querySelector("#menuButton");
+const menuButtonHide = document.querySelector("#menuButtonHide")
+const menuScherm = document.querySelector("#menuScherm")
 
+menuButton.addEventListener('click', function() {
+    menuScherm.classList.add('menuVisible');
+});
+
+menuButtonHide.addEventListener('click', function() {
+    menuScherm.classList.remove('menuVisible');
+});
 
 function checkScrollPosition(currentPosition) {
     switch (true) {
@@ -27,6 +38,7 @@ function checkScrollPosition(currentPosition) {
         liGewicht.textContent = '60.0 metrische ton';
         liPower.textContent = '1380 kW';
         liSnelheid.textContent = '0.93 G';
+        factionImg.src = './images/efsf.png';
         break;
       case currentPosition >= 440 && currentPosition <= 724:
         liJaar.textContent = 'UC 0086';
@@ -43,6 +55,7 @@ function checkScrollPosition(currentPosition) {
         liGewicht.textContent = '62.3 metrische ton';
         liPower.textContent = '2020 kW';
         liSnelheid.textContent = '1.81 G';
+        factionImg.src = './images/aeug.png';
         break;
       case currentPosition >= 1530 && currentPosition <= 1757:
         liJaar.textContent = 'UC 0088';
@@ -51,6 +64,7 @@ function checkScrollPosition(currentPosition) {
         liGewicht.textContent = '68.4 metrische ton';
         liPower.textContent = '7340 kW';
         liSnelheid.textContent = '1.48 G';
+        factionImg.src = './images/aeug.png';
         break;
       case currentPosition >= 2070 && currentPosition <= 2296:
         liJaar.textContent = 'UC 0093';
@@ -59,6 +73,7 @@ function checkScrollPosition(currentPosition) {
         liGewicht.textContent = '27.9 metrische ton';
         liPower.textContent = '2980 kW';
         liSnelheid.textContent = '1.55 G';
+        factionImg.src = './images/londoBell.png';
         break;
       case currentPosition >= 2610 && currentPosition <= 2839:
         liJaar.textContent = 'UC 0123';
@@ -67,6 +82,7 @@ function checkScrollPosition(currentPosition) {
         liGewicht.textContent = '19.9 metrische ton';
         liPower.textContent = '4250 kW';
         liSnelheid.textContent = '4.44 G';
+        factionImg.src = './images/efsf.png';
         break;
       case currentPosition >= 3060 && currentPosition <= 3385:
         liJaar.textContent = 'UC 0153';
@@ -75,31 +91,36 @@ function checkScrollPosition(currentPosition) {
         liGewicht.textContent = '17.7 metrische ton';
         liPower.textContent = '4780 kW';
         liSnelheid.textContent = '4.50 G';
+        factionImg.src = './images/leagueMilitaire.png';
         break;
       default:
         scrollPositionText.textContent = 'Locatie: ' + currentPosition + ' pixels';
     }
-  }
+}
   
 
 function scrollLeft() {
-  scrollableList.scrollBy({
-    left: -50,
-    behavior: 'smooth'
-  });
+    factionImg.src = './images/aeug.png';
+    playAudio('slideSfx.mp3');
+    scrollableList.scrollBy({
+        left: -50,
+        behavior: 'smooth'
+    });
 
-  const currentPosition = scrollableList.scrollLeft;
-  checkScrollPosition(currentPosition);
+    const currentPosition = scrollableList.scrollLeft;
+    checkScrollPosition(currentPosition);
 }
 
 function scrollRight() {
-  scrollableList.scrollBy({
-    left: 50,
-    behavior: 'smooth'
-  });
+    factionImg.src = './images/aeug.png';
+    playAudio('slideSfx.mp3');
+     scrollableList.scrollBy({
+        left: 50,
+        behavior: 'smooth'
+    });
 
-  const currentPosition = scrollableList.scrollLeft;
-  checkScrollPosition(currentPosition);
+    const currentPosition = scrollableList.scrollLeft;
+    checkScrollPosition(currentPosition);
 }
 
 buttonLinks.addEventListener('click', scrollLeft);
@@ -111,3 +132,19 @@ scrollableList.addEventListener('scroll', () => {
 });
 
 console.log('Huidige scrollpositie: ' + scrollableList.scrollLeft + ' pixels');
+
+function playAudio(audioNaam) {
+    const audio = new Audio("./sfx/" + audioNaam);
+    audio.play();
+}
+
+scrollableList.addEventListener('scroll', () => {
+    const currentPosition = scrollableList.scrollLeft;
+    const maxScrollLeft = scrollableList.scrollWidth - scrollableList.clientWidth;
+  
+    if (currentPosition === 0) {
+      console.log("Te veel links");
+    } else if (currentPosition >= maxScrollLeft) {
+      console.log("Te veel rechts");
+    }
+  });

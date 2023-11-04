@@ -124,13 +124,17 @@ main article:nth-of-type(1) section:first-of-type {
 main article:nth-of-type(1) ul {
   list-style: none;
   margin: 0em 2em 0em 2em;
-  padding-top: 2.5em;
+  padding-top: 2.3em;
 }
 
 main article:nth-of-type(1) li {
   margin-top: 1em;
   color: var(--fontBlack);
   font-weight: 800;
+}
+
+main article:nth-of-type(1) li img {
+  max-width: 90px;
 }
 
 main article:nth-of-type(1) section:nth-of-type(2) {
@@ -141,15 +145,15 @@ main article:nth-of-type(1) section:nth-of-type(2) {
 main article:nth-of-type(1) button {
   background-color: var(--buttonBg);
   color: var(--fontWhite);
-  padding: 0.5em;
+  padding: 0.3em;
   font-size: 2em;
-  margin: 0.5em 0.5em 6em 0.5em;
+  margin: 0.5em 0.3em 6em 0.3em;
   border-radius: 5px;
   border-color: var(--buttonBorder);
   border-width: 0.3em;
 }
 
-main article:nth-of-type(1) button:active, main article:nth-of-type(1) button:focus, main article:nth-of-type(1) button:hover {
+main article:nth-of-type(1) button:active, main article:nth-of-type(1) button:hover, main article:nth-of-type(1) button:focus {
   background-color: var(--buttonBgPressed);
   color: var(--buttonPointerPressed);
   border-color: var(--buttonBorderPressed);
@@ -185,6 +189,29 @@ main article:nth-of-type(2) img {
   min-width: 300px;
 }
 
+.menuVisible {
+  background: var(--computerScreenBgGradient);
+  min-width: 100vw;
+  min-height: 104vh;
+  position: absolute;
+  z-index: 1;
+  top: 0em;
+}
+
+.menuVisible p {
+  color: #276c9f;
+}
+
+.menuVisible button {
+  background-color: var(--buttonBg);
+  color: var(--fontWhite);
+  padding: 0.3em;
+  font-size: 2em;
+  margin: 0.5em 0.3em 6em 0.3em;
+  border-radius: 5px;
+  border-color: var(--buttonBorder);
+  border-width: 0.3em;
+}
 
 
 
@@ -219,15 +246,21 @@ footer ul {
 
 
 
-/* @keyframes sizeUp {
+@keyframes gewichtAnimatie {
   0% {
-    transform:scale(1);
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-10px)
+  }
+  75% {
+    transform: translateX(10px)
   }
   100% {
-    transform:scale(1.1);
+    transform: translateX(0px)
   }
 }
 
-main article:nth-of-type(2) img:hover {
-  animation:sizeUp 0.2s forwards;
-} */
+.gewichtAnimatie {
+  animation:gewichtAnimatie 0.4s;
+}
