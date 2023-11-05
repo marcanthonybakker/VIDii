@@ -54,13 +54,12 @@ img {
   --buttonPointerPressed: #838383;
   --buttonBorder: #4a85b1 #4a85b1 #99a00f #5981a0;
   --buttonBorderPressed: #376588 #376588 #0c0c01 #376588;
+  --computerBgWarning: linear-gradient(0deg, rgba(253,29,29,1) 0%, rgba(255,172,169,1) 25%, rgba(253,29,29,1) 65%, rgba(252,176,69,1) 100%);
   --computerBgGradient: linear-gradient(0deg, rgba(205,200,64,1) 0%, rgba(82,197,246,1) 19%, rgba(61,135,167,1) 39%, rgba(39,108,159,1) 100%);
   --computerScreenBgGradient: linear-gradient(0deg, rgba(37,137,203,1) 0%, rgba(133,225,230,1) 55%, rgba(75,172,214,1) 84%, rgba(37,137,203,1) 100%);
 }
 
 /* Gradient brond: https://cssgradient.io/ */
-
-
 
 
 
@@ -79,9 +78,6 @@ h1 {
 
 
 
-
-
-
 /********/
 /* BODY */
 /********/
@@ -91,9 +87,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-
-
 
 
 
@@ -192,31 +185,42 @@ main article:nth-of-type(2) img {
 .menuVisible {
   background: var(--computerScreenBgGradient);
   min-width: 100vw;
-  min-height: 104vh;
+  min-height: 100vh;
   position: absolute;
   z-index: 1;
   top: 0em;
+  box-shadow: inset 0 0 30px var(--fontWhite);
+  display: flex;
 }
 
 .menuVisible p {
-  color: #276c9f;
+  font-size: 1.8em;
+  font-weight: 600;
+  line-height: 2em;
+  margin: 3em 3em 0em 0em;
 }
 
 .menuVisible button {
   background-color: var(--buttonBg);
   color: var(--fontWhite);
-  padding: 0.3em;
+  padding: 0.3em 0.5em 0.3em 0.5em;
   font-size: 2em;
-  margin: 0.5em 0.3em 6em 0.3em;
+  margin: 3em 2em 0em 3em;
   border-radius: 5px;
   border-color: var(--buttonBorder);
   border-width: 0.3em;
+  max-height: 2.5em;
 }
 
+.menuVisible button:hover, .menuVisible button:active, .menuVisible button:focus {
+  background-color: var(--buttonBgPressed);
+  color: var(--buttonPointerPressed);
+  border-color: var(--buttonBorderPressed);
+}
 
-
-
-
+.menuHidden {
+  display: none;
+}
 
 
 
@@ -244,23 +248,45 @@ footer ul {
 
 
 
+/**********/
+/* FOOTER */
+/**********/
 
-
-@keyframes gewichtAnimatie {
+@keyframes slideAnimatie {
   0% {
-    transform: translateX(0px);
+    transform: translateY(0px)
   }
-  25% {
-    transform: translateX(-10px)
+  30% {
+    transform: translateY(-10px)
   }
-  75% {
-    transform: translateX(10px)
-  }
-  100% {
-    transform: translateX(0px)
+  100%{
+    transform: translateY(0px)
   }
 }
 
-.gewichtAnimatie {
-  animation:gewichtAnimatie 0.4s;
+.slideAnimatie {
+  animation-name: slideAnimatie;
+  animation-duration: 0.2s;
+  animation-delay: 0.2s;
+}
+
+@keyframes scrollNotifcatie {
+  0% {
+    background: var(--computerBgWarning);
+  }
+  25% {
+    background: var(--computerScreenBgGradient);
+  }
+  50% {
+    background: var(--computerBgWarning);
+  }
+  100% {
+    background: var(--computerScreenBgGradient);
+  }
+}
+
+.pcWarningAnimatie {
+  animation-name: scrollNotifcatie;
+  animation-duration: 3s;
+  animation-delay: 0.3s;
 }
