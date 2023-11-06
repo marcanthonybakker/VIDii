@@ -2,12 +2,6 @@
 
 # Interface en Interactie Marc Bakker
 
-### Doel
-Een mooie basis met mapjes, html, css en js die goed aan elkaar gelinkt zijn.
-
-### Vorderingen
-A
-
 ## 1. Uitkomst research
 
 ![Godzilla](https://github.com/marcanthonybakker/VIDii/assets/118165939/bc623e95-ef0c-4246-8022-918f6ae9a76f)
@@ -31,23 +25,25 @@ Ik heb als eerst gekeken naar een paar algemene aspecten dat te maken heeft met 
 
 ![Concept](https://github.com/marcanthonybakker/VIDii/assets/118165939/63a7b3e0-be8e-409d-a9fa-806f0dc8945e)
 
-
-![Concept v2](https://github.com/marcanthonybakker/VIDii/assets/118165939/7ae23c1d-db8e-474d-b589-da03ed0a935a)
-
 ### Toelichting
 Mijn onderwerp is Mobile Suit Gundam. Dat is een science fiction anime show uit 1979 tot nu. Ik ga het specifiek hebben over speciale uitgaves van hun modelbouw figuren door de jaren heen. Om nog iets specifieker te zijn wil ik de website laten zien alsof je op locatie bent van Gundam Factory Yokohama Japan. Als je op een modelbouw doos aanklikt dan wijst de 18 meter lange Gundam naar het product. Verder wordt er informatie weergegeven zoals: Datum van uitgifte, Schaal, Prijs en nog meer korte relevante informatie dat dat product zich onderscheid van de andere. En die informatie wordt in een balk onderaan weergegeven.
 
 ### Feedback
+
 Ik heb feedback van Steven en Ruben. Zij zeiden dat mijn idee nog een beetje algemeen is. Het idee van een Gundam factory vonden ze wel leuk, maar het was een beetje vreemde de model kits zomaar aan het zweven is. Dus Steven en Ruben kwamen op het idee om het onderwerp weer terug naar het Gundam show terug te brengen. Dus breng deze suits terug in binnen in een fabriek van de show zelf.
 
-Vanuit dat voorstel wil ik echte suits op een missie sturen in een hangar binnen in een moederschip van de show zelf. Daarvan los zie je nog steeds losse info over de suits. Maar dit maakt het concept uniek omdat het sturen van deze mobile suits in een Gundam dock zie je alleen in de show zelf. Ik denk dat dit het idee wat meer gericht en uniek is van het onderwerp. Ik had het daarna ook nog even gevraagd aan de docent. En die vindt dit een veel beter richting. Maar Wanneer de basis staat, werd er wel aangeraden om verder kleinere onderwerp gerichte details toe te voegen. Zodat je, je nog meer in het onderwerp verdiept.
-
-### Toelichting
-### Feedback
-
 ## 4. Details + feedback
+
+![Concept v2](https://github.com/marcanthonybakker/VIDii/assets/118165939/7ae23c1d-db8e-474d-b589-da03ed0a935a)
+
+![Concept v2 2](https://github.com/marcanthonybakker/VIDii/assets/118165939/b403f517-04f5-49a8-9680-b7fdbdeb2040)
+
 ### Toelichting
-### Feedback
+Vanuit de feedback van mijn eerste uitgewerkte concept wil ik echte suits op een missie sturen in een hangar binnen in een moederschip van de show zelf. Daarvan los zie je nog steeds losse info over de suits. Maar dit maakt het concept uniek en wat specifieker. Omdat een opslagplek van deze gigantische robots zie je alleen in deze show. Ik had het ook nog even gevraagd aan de docent. En die vindt dit een veel beter richting. Maar Wanneer de basis staat, werd er wel aangeraden om verder kleinere onderwerp gerichte details toe te voegen. Zodat je, je nog meer in het onderwerp verdiept. Ik heb alvast wat nagedacht over progressive disclosure, feedback (en toevallig feedforward).
+
+Voor progressive disclosure heb je een aparte info knop die net iets meer info geeft over de mobile suit. Feedback, als je met de knoppen vooruit/achteruit gaat hoor je een sound effect van een mechaniek dat beweegt. Om de gebruiker te laten weten dat er iets moet gebeuren en het suggereert dat er echt iets mechanisch beweegt. En ik heb ook als feedback, dat als je helemaal naar rechts en naar links gaat, dat het scherm rood wordt, als indicatie dat je klaar bent met door scrollen/klikken. Feedforward, het scherm is laat nog aan de linkerkant zien wat het eerstvolgende Mobile Suit is.
+
+### Paaseieren
 
 ## 5. Reflectie op ontwerp, code en eigen ontwikkeling
 ### Toelichting
@@ -70,3 +66,14 @@ Vanuit dat voorstel wil ik echte suits op een missie sturen in een hangar binnen
 * https://gundam.fandom.com/wiki/RX-93_%CE%BD_Gundam
 * https://gundam.fandom.com/wiki/F91_Gundam_F91
 * https://gundam.fandom.com/wiki/LM312V04_Victory_Gundam
+* https://i.pinimg.com/originals/a7/bf/a3/a7bfa361e890f6f38bd5c4e79f395400.jpg
+* https://fonts.google.com/specimen/Sometype+Mono
+* https://cssgradient.io/
+* https://9elements.github.io/fancy-border-radius/
+* https://static.wikia.nocookie.net/gundam/images/2/2e/EFF.png/revision/latest?cb=20200921160540
+* https://static.wikia.nocookie.net/gundam/images/8/80/AEUG.png/revision/latest?cb=20200103085814
+* https://static.wikia.nocookie.net/gundam/images/2/29/Londo_Bell_CCA_b.png/revision/latest?cb=20200105025122
+* https://static.wikia.nocookie.net/gundam/images/9/9d/Logo_league-militaire.png/revision/latest/thumbnail/width/360/height/360?cb=20190110183528
+* https://gundam.fandom.com/wiki/Amuro_Ray
+* https://static.wikia.nocookie.net/gundam/images/7/73/Fraw_Tamura_Bright_Sayla_Amuro_Haro_Kikka_Letz_Katz_Mirai_Kai_Hayato_Job_Sleggar_MSG_e31_04m25s_04m28s.png/revision/latest?cb=20201104012549
+* https://anime.astronerdboy.com/wp-content/uploads/blogger/_abkMP58OLUA/TLVFyDVyZEI/AAAAAAAAVsQ/V2vecV6R_6o/s1600/x4%2BMatilda%2Band%2Bcrew.jpg
