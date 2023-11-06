@@ -54,6 +54,10 @@ img {
   --buttonPointerPressed: #838383;
   --buttonBorder: #4a85b1 #4a85b1 #99a00f #5981a0;
   --buttonBorderPressed: #376588 #376588 #0c0c01 #376588;
+  --link: #f3221b;
+  --linkHover: #f3a71b;
+  --linkActive: #7b5000;
+  --zeroStateBg: #2b2b2bcd;
   --computerBgWarning: linear-gradient(0deg, rgba(253,29,29,1) 0%, rgba(255,172,169,1) 25%, rgba(253,29,29,1) 65%, rgba(252,176,69,1) 100%);
   --computerBgGradient: linear-gradient(0deg, rgba(205,200,64,1) 0%, rgba(82,197,246,1) 19%, rgba(61,135,167,1) 39%, rgba(39,108,159,1) 100%);
   --computerScreenBgGradient: linear-gradient(0deg, rgba(37,137,203,1) 0%, rgba(133,225,230,1) 55%, rgba(75,172,214,1) 84%, rgba(37,137,203,1) 100%);
@@ -67,9 +71,9 @@ img {
 /* ALGEMENE STYLING */
 /********************/
 
-p {
+p, a {
   font-family: 'Sometype Mono', monospace;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 h1 {
@@ -88,6 +92,53 @@ body {
   background-size: cover;
 }
 
+
+/**************/
+/* ZERO STATE */
+/**************/
+
+header section:nth-of-type(1) {
+  background: var(--zeroStateBg);
+  min-height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+header section:nth-of-type(1) img {
+  width: 15em;
+  margin: 8em 0em 2em 0em;
+}
+
+header section:nth-of-type(1) p {
+  font-size: 2em;
+  font-weight: 800;
+  color: var(--fontWhite);
+  line-height: 1.8em;
+  width: 20em;
+}
+
+header section:nth-of-type(1) button {
+  background-color: var(--buttonBg);
+  color: var(--fontWhite);
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  font-size: 2em;
+  border-radius: 5px;
+  border-color: var(--buttonBorder);
+  border-width: 0.3em;
+  max-height: 2.5em;
+  margin-top: 1em;
+}
+
+header section:nth-of-type(1) button:hover, header section:nth-of-type(1) button:focus {
+  background-color: var(--buttonBgPressed);
+  color: var(--buttonPointerPressed);
+  border-color: var(--buttonBorderPressed);
+}
 
 
 /********/
@@ -146,7 +197,7 @@ main article:nth-of-type(1) button {
   border-width: 0.3em;
 }
 
-main article:nth-of-type(1) button:active, main article:nth-of-type(1) button:hover, main article:nth-of-type(1) button:focus {
+main article:nth-of-type(1) button:active, main article:nth-of-type(1) button:hover {
   background-color: var(--buttonBgPressed);
   color: var(--buttonPointerPressed);
   border-color: var(--buttonBorderPressed);
@@ -182,6 +233,11 @@ main article:nth-of-type(2) img {
   min-width: 300px;
 }
 
+main article:nth-of-type(2) button {
+  background: none;
+  border: none;
+}
+
 .menuVisible {
   background: var(--computerScreenBgGradient);
   min-width: 100vw;
@@ -190,14 +246,28 @@ main article:nth-of-type(2) img {
   z-index: 1;
   top: 0em;
   box-shadow: inset 0 0 30px var(--fontWhite);
-  display: flex;
 }
 
 .menuVisible p {
   font-size: 1.8em;
   font-weight: 600;
   line-height: 2em;
-  margin: 3em 3em 0em 0em;
+  margin: 3em 3.5em 1em 3.5em;
+}
+
+.menuVisible a {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 0em 3.5em 0em 3.5em;
+  color: var(--link);
+}
+
+.menuVisible a:hover {
+  color: var(--linkHover);
+}
+
+.menuVisible a:active {
+  color: var(--linkActive);
 }
 
 .menuVisible button {
@@ -212,7 +282,7 @@ main article:nth-of-type(2) img {
   max-height: 2.5em;
 }
 
-.menuVisible button:hover, .menuVisible button:active, .menuVisible button:focus {
+.menuVisible button:hover, .menuVisible button:focus {
   background-color: var(--buttonBgPressed);
   color: var(--buttonPointerPressed);
   border-color: var(--buttonBorderPressed);
@@ -220,30 +290,6 @@ main article:nth-of-type(2) img {
 
 .menuHidden {
   display: none;
-}
-
-
-
-/**********/
-/* FOOTER */
-/**********/
-
-footer {
-  background-color: var(--bgFooter);
-}
-
-footer p {
-  font-size: 0.8em;
-  color: var(--fontWhite);
-}
-
-footer ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  margin-top: 7em;
-  padding: 1em;
-  gap: 1em;
 }
 
 
@@ -274,10 +320,10 @@ footer ul {
   0% {
     background: var(--computerBgWarning);
   }
-  25% {
+  40% {
     background: var(--computerScreenBgGradient);
   }
-  50% {
+  70% {
     background: var(--computerBgWarning);
   }
   100% {
@@ -287,6 +333,27 @@ footer ul {
 
 .pcWarningAnimatie {
   animation-name: scrollNotifcatie;
-  animation-duration: 3s;
-  animation-delay: 0.3s;
+  animation-duration: 1s;
+}
+
+@keyframes easterEggAnimatie {
+  0% {
+    transform: translateY(0px)
+  }
+  25% {
+    transform: translateY(-200px)
+  }
+  50% {
+    transform: translateY(-150px)
+  }
+  75% {
+    transform: translateY(-700px)
+  }
+  100% {
+    transform: translateY(0px)
+  }
+}
+
+.easterEggAnimatie {
+  animation: easterEggAnimatie 1.5s;
 }

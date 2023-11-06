@@ -19,8 +19,16 @@
 </head>
 
 <body>
-	<header>
+	<header id="zeroState">
 		<h1>Interface en Interactie Marc Bakker</h1>
+		<article>
+			<section>
+				<img src="./images/gundamLogo.webp" alt="Logo van Mobile Suit Gundam 1979">
+				<p>Een Mobile Suit Gundam tijdlijn van de belangrijkste mechs door de jaren heen. Door Marc Bakker.
+				</p>
+				<button id="zeroStateOff">Start</button>
+			</section>
+		</article>
 	</header>
 
 	<main>
@@ -28,70 +36,59 @@
 			<section id="computerScreen">
 				<ul>
 					<li>
-						<p id="liJaar" class="">UC 0079</p>
+						<p id="liJaar">Jaar: UC 0079</p>
 					</li>
 					<li>
-						<p id="liNaam">RX 79-2 Gundam</p>
+						<p id="liNaam">Naam: RX 79-2 Gundam</p>
 					</li>
 					<li>
-						<p id="liLengte">18.0 meter</p>
+						<p id="liLengte">Lengte: 18.0 meter</p>
 					</li>
 					<li>
-						<p id="liGewicht">60.0 metrische ton</p>
+						<p id="liGewicht">Gewicht: 60.0 Ton</p>
 					</li>
 					<li>
-						<p id="liPower">1380 kW</p>
+						<p id="liPower">Energie: 1380 kW</p>
 					</li>
 					<li>
-						<p id="liSnelheid">0.93 G</p>
+						<p id="liSnelheid">Snelheid: 0.93 G</p>
 					</li>
 					<li>
 						<img id="factionImg" src="./images/efsf.png" alt="">
 					</li>
 				</ul>
 			</section>
-
 			<section>
 				<button id="buttonLinks" type="button">◄</button>
 				<button id="menuButton">ⓘ</button>
 				<button id="buttonRechts" type="button">►</button>
 			</section>
 		</article>
+
 		<article>
 			<section>
 				<ul id="scrollable-list">
 					<li id="img78"><img src="./images/rx78.png" alt="RX 78-2 Gundam"></li>
-					<li id="imgMk"><img src="./images/mkii.png" alt="RX-178 Gundam Mk-II"></li>
+					<li id="imgMk"><button id="easterEggLiftOff"><img src="./images/mkii.png"
+								alt="RX-178 Gundam Mk-II"></button></li>
 					<li id="imgZeta"><img src="./images/zeta.png" alt="MSZ-006 Zeta Gundam"></li>
-					<li id="imgZz"><img src="./images/zz.png" alt="MSZ-010 zz Gundam">></li>
+					<li id="imgZz"><img src="./images/zz.png" alt="MSZ-010 zz Gundam"></li>
 					<li id="imgNg"><img src="./images/nu.png" alt="RX-93 nu Gundam"></li>
 					<li id="imgF91"><img src="./images/f91.png" alt="F91 Gundam F91"></li>
 					<li id="imgVic"><img src="./images/victory.png" alt="LM312V04 Victory Gundam"></li>
 				</ul>
 			</section>
 		</article>
+
 		<article id="menuScherm" class="menuHidden">
 			<button id="menuButtonHide">✖</button>
 			<p id="extraInfo">The RX-78-2 Gundam is the titular mobile suit of Mobile Suit Gundam television series.
 				Part of the RX-78 Gundam series, it was built in secret on Side 7. The Gundam would turn the tide of war
 				in favor of the Earth Federation during the One Year War against the Principality of Zeon. It was
 				primarily piloted by Amuro Ray.</p>
+			<a href="https://gundam.fandom.com/wiki/RX-78-2_Gundam" id="link">Meer info</a>
 		</article>
 	</main>
-
-	<!-- <footer>
-		<article>
-			<ul>
-				<li>
-					<p>Naam: Marc Bakker</p>
-				</li>
-				<li>
-					<p>Studentnummer: 500880422</p>
-				</li>
-			</ul>
-		</article>
-	</footer> -->
-
 
 	<script src="scripts/script.js"></script>
 </body>
