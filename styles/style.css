@@ -63,7 +63,7 @@ img {
   --computerScreenBgGradient: linear-gradient(0deg, rgba(37,137,203,1) 0%, rgba(133,225,230,1) 55%, rgba(75,172,214,1) 84%, rgba(37,137,203,1) 100%);
 }
 
-/* Gradient brond: https://cssgradient.io/ */
+/* Gradient bron: https://cssgradient.io/ */
 
 
 
@@ -90,7 +90,22 @@ body {
   background-image: url(../images/bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 2560px;
 }
+
+/**************/
+/* SCROLL BAR */
+/**************/
+
+::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-track {
+  visibility: hidden;
+}
+
+/* Scroll bar stylen bron: https://css-tricks.com/almanac/properties/s/scrollbar/ */
 
 
 /**************/
@@ -294,9 +309,9 @@ main article:nth-of-type(2) button {
 
 
 
-/**********/
-/* FOOTER */
-/**********/
+/*************/
+/* ANIMATIES */
+/*************/
 
 @keyframes slideAnimatie {
   0% {

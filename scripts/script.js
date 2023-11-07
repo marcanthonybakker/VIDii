@@ -128,7 +128,7 @@ function checkScrollPosition(currentPosition) {
         liLengte.textContent = 'Lengte: 19.86 meter';
         liGewicht.textContent = 'Gewicht: 68.4 metrische ton';
         liPower.textContent = 'Energie: 7340 kW';
-        liSnelheid.textContent = 'Energie: Snelheid: 1.48 G';
+        liSnelheid.textContent = 'Snelheid: 1.48 G';
         factionImg.src = './images/aeug.png';
         link.href = 'https://gundam.fandom.com/wiki/MSZ-010_%CE%96%CE%96_Gundam';
         if (!imgZz.classList.contains('slideAnimatie')) {
@@ -247,4 +247,4 @@ scrollableList.addEventListener('scroll', () => {
     } else {
         computerScreen.classList.remove('pcWarningAnimatie');
     }
-});
+}); 
