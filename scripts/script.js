@@ -1,3 +1,7 @@
+/********************************************************/
+/* Aanroepen van buttons en locaties voor JS interactie */
+/********************************************************/
+
 console.log("Howdy!");
 
 // Navigatie menu
@@ -42,8 +46,9 @@ const easterEggLiftOff = document.querySelector("#easterEggLiftOff");
 
 
 
-
-
+/**************************/
+/* Basis klik interacties */
+/**************************/
 
 // Easter egg lift off animatie
 easterEggLiftOff.addEventListener('click', function() {
@@ -72,6 +77,11 @@ menuButtonHide.addEventListener('click', function() {
 
 
 
+
+/********************************************************************************************/
+/* Checkt scroll locatie, en verranderd text, animatie, link op basis van ongevere locatie  */
+/********************************************************************************************/
+
 // Horizontal scroll pas aan scherm text, img, animatie, overlay text
 // Bron: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
 // Bron: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT
@@ -79,22 +89,26 @@ menuButtonHide.addEventListener('click', function() {
 function checkScrollPosition(currentPosition) {
     // de case moet true zijn, anders gaat default af
     switch (true) {
-      case currentPosition >= 0 && currentPosition <= 158:
+    // Tussen positie eerste en tweede pixel locatie gaat de rest van de acties af
+    case currentPosition >= 0 && currentPosition <= 158:
+        // Alle text info per specifieke Mobile Suit dat veranderd wordt
         liJaar.textContent = 'Jaar: UC 0079';
         liNaam.textContent = 'Naam: RX 79-2 Gundam';
         liLengte.textContent = 'Lengte: 18.0 meter';
         liGewicht.textContent = 'Gewicht: 60.0 Ton';
         liPower.textContent = 'Energie: 1380 kW';
         liSnelheid.textContent = 'Snelheid: 0.93 G';
+        // De faction afbeelding locatie wordt veranderd
         factionImg.src = './images/efsf.png';
+        // De link locatie per specifieke Mobile Suit dat veranderd wordt
         link.href = 'https://gundam.fandom.com/wiki/RX-78-2_Gundam';
         // als img78 etc er niet is, voeg dan de class toe, d.m.v. logical not operator
         if (!img78.classList.contains('slideAnimatie')) {
             img78.classList.add('slideAnimatie');
         }
-        extraInfo.textContent = 'The RX-78-2 Gundam is the titular mobile suit of Mobile Suit Gundam television series. Part of the RX-78 Gundam series, it was built in secret on Side 7. The Gundam would turn the tide of war in favor of the Earth Federation during the One Year War against the Principality of Zeon. It was primarily piloted by Amuro Ray.';
+        extraInfo.textContent = 'De RX-78-2 Gundam is het kenmerkende mobiele pak van de televisieserie Mobile Suit Gundam. Als onderdeel van de RX-78 Gundam serie werd het in het geheim gebouwd op Side 7. De Gundam zou de loop van de oorlog ten gunste van de Aardse Federatie veranderen tijdens de Eenjarige Oorlog tegen het Vorstendom Zeon. Het werd voornamelijk bestuurd door Amuro Ray.';
         break;
-      case currentPosition >= 440 && currentPosition <= 724:
+    case currentPosition >= 520 && currentPosition <= 701:
         liJaar.textContent = 'Jaar: UC 0086';
         liNaam.textContent = 'Naam: RX-178 Gundam Mk-II';
         liLengte.textContent = 'Lengte: 18.5 meter';
@@ -106,9 +120,9 @@ function checkScrollPosition(currentPosition) {
         if (!imgMk.classList.contains('slideAnimatie')) {
             imgMk.classList.add('slideAnimatie');
         }
-        extraInfo.textContent = 'The RX-178 Gundam Mk-II is a mobile suit introduced in the anime series Mobile Suit Zeta Gundam. It is a successor of the famous RX-78-2 Gundam that served in the One Year War.';
+        extraInfo.textContent = 'De RX-178 Gundam Mk-II is een mobiel pak dat geïntroduceerd wordt in de anime serie Mobile Suit Zeta Gundam. Het is de opvolger van de bekende RX-78-2 Gundam die diende tijdens de Eenjarige Oorlog.';
         break;
-      case currentPosition >= 990 && currentPosition <= 1234:
+    case currentPosition >= 1110 && currentPosition <= 1291:
         liJaar.textContent = 'Jaar: UC 0087';
         liNaam.textContent = 'Naam: MSZ-006 Zeta Gundam';
         liLengte.textContent = 'Lengte: 19.85 meter';
@@ -120,9 +134,9 @@ function checkScrollPosition(currentPosition) {
         if (!imgZeta.classList.contains('slideAnimatie')) {
             imgZeta.classList.add('slideAnimatie');
         }
-        extraInfo.textContent = 'The MSZ-006 Zeta Gundam was the titular mobile suit of the anime Mobile Suit Zeta Gundam. It was also featured in the sequel series Mobile Suit Gundam ZZ.';
+        extraInfo.textContent = 'De MSZ-006 Zeta Gundam was het kenmerkende mobiele pak van de anime Mobile Suit Zeta Gundam. Het verscheen ook in de vervolgserie Mobile Suit Gundam ZZ.';
         break;
-      case currentPosition >= 1530 && currentPosition <= 1757:
+    case currentPosition >= 1700 && currentPosition <= 1981:
         liJaar.textContent = 'Jaar: UC 0088';
         liNaam.textContent = 'Naam: MSZ-010 ZZ Gundam';
         liLengte.textContent = 'Lengte: 19.86 meter';
@@ -134,9 +148,9 @@ function checkScrollPosition(currentPosition) {
         if (!imgZz.classList.contains('slideAnimatie')) {
             imgZz.classList.add('slideAnimatie');
         }
-        extraInfo.textContent = 'The MSZ-010 ZZ Gundam (aka ZZ Gundam, ZZ; pronounced "Double Zeta") is the titular mobile suit of the anime Mobile Suit Gundam ZZ and is piloted by Judau Ashta.';
+        extraInfo.textContent = 'De MSZ-010 ZZ Gundam (ook bekend als ZZ Gundam, ZZ; uitgesproken als "Dubbele Zeta") is het kenmerkende mobiele pak van de anime Mobile Suit Gundam ZZ en wordt bestuurd door Judau Ashta.';
         break;
-      case currentPosition >= 2070 && currentPosition <= 2296:
+    case currentPosition >= 2290 && currentPosition <= 2468:
         liJaar.textContent = 'Jaar: UC 0093';
         liNaam.textContent = 'Naam: RX-93 Nu Gundam';
         liLengte.textContent = 'Lengte: 22.0 meter';
@@ -148,9 +162,9 @@ function checkScrollPosition(currentPosition) {
         if (!imgNg.classList.contains('slideAnimatie')) {
             imgNg.classList.add('slideAnimatie');
         }
-        extraInfo.textContent = 'The RX-93 Nu Gundam (aka Nu Gundam, Nu) is a mobile suit introduced in Mobile Suit Gundam: Chars Counterattack. It was designed and piloted by Amuro Ray.';
+        extraInfo.textContent = 'De RX-93 Nu Gundam (ook bekend als Nu Gundam, Nu) is een mobiel pak geïntroduceerd in Mobile Suit Gundam: Chars Counterattack. Het werd ontworpen en bestuurd door Amuro Ray.';
         break;
-      case currentPosition >= 2610 && currentPosition <= 2839:
+    case currentPosition >= 2880 && currentPosition <= 3058:
         liJaar.textContent = 'Jaar: UC 0123';
         liNaam.textContent = 'Naam: F91 Gundam F91';
         liLengte.textContent = 'Lengte: 15.2 meter';
@@ -162,9 +176,9 @@ function checkScrollPosition(currentPosition) {
         if (!imgF91.classList.contains('slideAnimatie')) {
             imgF91.classList.add('slideAnimatie');
         }
-        extraInfo.textContent = 'The F91 Gundam F91 (F91 ガンダムF91 Effu Kujūichi Gandamu Fōmyura Nainti Wan?) is a mobile suit introduced in the movie Mobile Suit Gundam F91, in which it was piloted by Seabook Arno. Harrison Madin piloted two production type units in custom colors.';
+        extraInfo.textContent = 'De F91 Gundam F91 (F91 ガンダムF91, Effu Kujūichi Gandamu Fōmyura Nainti Wan?) is een mobiel pak geïntroduceerd in de film Mobile Suit Gundam F91, waarin het werd bestuurd door Seabook Arno. Harrison Madin bestuurde twee productietype eenheden in aangepaste kleuren.';
         break;
-      case currentPosition >= 3060 && currentPosition <= 3385:
+    case currentPosition >= 3405 && currentPosition <= 3756:
         liJaar.textContent = 'Jaar: UC 0153';
         liNaam.textContent = 'Naam: LM312V04 Victory Gundam';
         liLengte.textContent = 'Lengte: 18.5 meter';
@@ -176,10 +190,10 @@ function checkScrollPosition(currentPosition) {
         if (!imgVic.classList.contains('slideAnimatie')) {
             imgVic.classList.add('slideAnimatie');
         }
-        extraInfo.textContent = 'The LM312V04 Victory Gundam (aka V1) is the titular mobile suit of Mobile Suit Victory Gundam, most prominently piloted by Üso Ewin until he acquired its successor, the LM314V21 Victory 2 Gundam.';
+        extraInfo.textContent = 'De LM312V04 Victory Gundam (ook bekend als V1) is het kenmerkende mobiele pak van Mobile Suit Victory Gundam, meestal bestuurd door Üso Ewin totdat hij zijn opvolger, de LM314V21 Victory 2 Gundam, verkreeg.';
         break;
       default:
-        // Haal de animatie weg op elke andere scrollocatie om de animatie opnieuw te plaatsen.
+        // Haal de animatie weg op elke andere scrollocatie om de animatie herhalend opnieuw te plaatsen wanneer je weer over de juiste positie gaat.
         img78.classList.remove('slideAnimatie');
         imgMk.classList.remove('slideAnimatie');
         imgMk.classList.remove('easterEggAnimatie');
@@ -193,6 +207,11 @@ function checkScrollPosition(currentPosition) {
 
 
 
+
+/********************************/
+/* Computer scherm menu knoppen */
+/********************************/
+
 // Menu buttons links en rechts 50px en speel slide audio af.
 // En het lezen van de huidige locatie.
 function scrollLeft() {
@@ -204,7 +223,6 @@ function scrollLeft() {
 }
 
 function scrollRight() {
-    factionImg.src = './images/aeug.png';
     playAudio('slideSfx.mp3');
      scrollableList.scrollBy({
         left: 50,
@@ -215,12 +233,18 @@ function scrollRight() {
 buttonLinks.addEventListener('click', scrollLeft);
 buttonRechts.addEventListener('click', scrollRight);
 
+
 scrollableList.addEventListener('scroll', () => {
-  const currentPosition = scrollableList.scrollLeft;
-  checkScrollPosition(currentPosition);
+    const currentPosition = scrollableList.scrollLeft;
+    checkScrollPosition(currentPosition);
 });
 
 
+
+
+/********************************************************************************************************/
+/* Audio functie dat audio files zoekt in de sfx map en laat afspelen wanneer een file opgeroepen wordt */
+/********************************************************************************************************/
 
 // Oproepen van van de audio in de sfx map
 function playAudio(audioNaam) {
@@ -230,13 +254,24 @@ function playAudio(audioNaam) {
 
 
 
+
+/***********************************************************************************/
+/* Wanneer je te veel naar rechts of links gaat laat een animatie en geluid afgaan */
+/***********************************************************************************/
+
+// scrollWidth snap ik niet bron: https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollWidth
+// clientWidth snap ik niet bron: https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth
+
 // Animatie reactie als je het einde en het begin (alweer) behaalt
 scrollableList.addEventListener('scroll', () => {
+
     const currentPosition = scrollableList.scrollLeft;
     const maxScrollLeft = scrollableList.scrollWidth - scrollableList.clientWidth;
+    // Laat in de console weten wat de huidige scroll positie is
     console.log("Huidige scrollpositie: " + currentPosition + " pixels");
   
     if (currentPosition === 0) {
+        // Als de huidige positie 0 is dan een console log, animatie en sound effect
         console.log("Te veel links");
         computerScreen.classList.add('pcWarningAnimatie');
         playAudio('warning.mp3');
@@ -244,7 +279,9 @@ scrollableList.addEventListener('scroll', () => {
         console.log("Te veel rechts");
         computerScreen.classList.add('pcWarningAnimatie');
         playAudio('warning.mp3');
+        // Als de huidige positie het maximale is dan een console log, animatie en sound effect
     } else {
+        // Haal weg wanneer je er niet bent zodat je weeer herhalend de bovenste acties kan af laten gaan.
         computerScreen.classList.remove('pcWarningAnimatie');
     }
 }); 

@@ -20,21 +20,18 @@
 
 <body>
 	<header id="zeroState">
-		<h1>Interface en Interactie Marc Bakker</h1>
-		<article>
-			<section>
-				<img src="./images/gundamLogo.webp" alt="Logo van Mobile Suit Gundam 1979">
-				<p>Een Mobile Suit Gundam tijdlijn van de belangrijkste mechs door de jaren heen. Door Marc Bakker.
-				</p>
-				<button id="zeroStateOff">Start</button>
-			</section>
-		</article>
+		<h1>Interface en Interactie Marc Bakker zero state scherm</h1>
+		<img src="./images/gundamLogo.webp" alt="Logo van Mobile Suit Gundam 1979">
+		<p>Een Mobile Suit Gundam tijdlijn van de belangrijkste mechs door de jaren heen. Door Marc Bakker.
+		</p>
+		<button id="zeroStateOff" aria-label="Zero state scherm uitzetten">Start</button>
 	</header>
 
 	<main>
-		<article>
-			<section id="computerScreen">
-				<ul>
+		<div>
+			<section>
+				<h2>Computerscherm gundam data</h2>
+				<ul id="computerScreen">
 					<li>
 						<p id="liJaar">Jaar: UC 0079</p>
 					</li>
@@ -56,38 +53,42 @@
 					<li>
 						<img id="factionImg" src="./images/efsf.png" alt="">
 					</li>
+					<li>
+						<p id="scrollPositionLog"></p>
+					</li>
 				</ul>
-			</section>
-			<section>
-				<button id="buttonLinks" type="button">◄</button>
-				<button id="menuButton">ⓘ</button>
-				<button id="buttonRechts" type="button">►</button>
-			</section>
-		</article>
 
-		<article>
-			<section>
-				<ul id="scrollable-list">
-					<li id="img78"><img src="./images/rx78.png" alt="RX 78-2 Gundam"></li>
-					<li id="imgMk"><button id="easterEggLiftOff"><img src="./images/mkii.png"
-								alt="RX-178 Gundam Mk-II"></button></li>
-					<li id="imgZeta"><img src="./images/zeta.png" alt="MSZ-006 Zeta Gundam"></li>
-					<li id="imgZz"><img src="./images/zz.png" alt="MSZ-010 zz Gundam"></li>
-					<li id="imgNg"><img src="./images/nu.png" alt="RX-93 nu Gundam"></li>
-					<li id="imgF91"><img src="./images/f91.png" alt="F91 Gundam F91"></li>
-					<li id="imgVic"><img src="./images/victory.png" alt="LM312V04 Victory Gundam"></li>
-				</ul>
+				<menu>
+					<li><button id="buttonLinks" aria-label="Mobile suit naar links knop">◄</button></li>
+					<li><button id="menuButton" aria-label="Meer informatie knop">Info</button></li>
+					<li><button id="buttonRechts" aria-label="Mobile suit naar rechts">▶</button></li>
+				</menu>
 			</section>
-		</article>
+		</div>
 
-		<article id="menuScherm" class="menuHidden">
-			<button id="menuButtonHide">✖</button>
-			<p id="extraInfo">The RX-78-2 Gundam is the titular mobile suit of Mobile Suit Gundam television series.
-				Part of the RX-78 Gundam series, it was built in secret on Side 7. The Gundam would turn the tide of war
-				in favor of the Earth Federation during the One Year War against the Principality of Zeon. It was
-				primarily piloted by Amuro Ray.</p>
+		<section>
+			<h2>Alle mobile suits op eem rijtje</h2>
+			<ul id="scrollable-list">
+				<li id="img78"><img src="./images/rx78.png" alt="RX 78-2 Gundam"></li>
+				<li id="imgMk"><button id="easterEggLiftOff"><img src="./images/mkii.png"
+							alt="RX-178 Gundam Mk-II"></button></li>
+				<li id="imgZeta"><img src="./images/zeta.png" alt="MSZ-006 Zeta Gundam"></li>
+				<li id="imgZz"><img src="./images/zz.png" alt="MSZ-010 zz Gundam"></li>
+				<li id="imgNg"><img src="./images/nu.png" alt="RX-93 nu Gundam"></li>
+				<li id="imgF91"><img src="./images/f91.png" alt="F91 Gundam F91"></li>
+				<li id="imgVic"><img src="./images/victory.png" alt="LM312V04 Victory Gundam"></li>
+			</ul>
+		</section>
+
+		<section id="menuScherm" class="menuHidden">
+			<h2>Extra informatie scherm</h2>
+			<button id="menuButtonHide" aria-label="Extra informatie scherm weg knop">✖</button>
+			<p id="extraInfo">De RX-78-2 Gundam is het kenmerkende mobiele pak van de televisieserie Mobile Suit Gundam.
+				Als onderdeel van de RX-78 Gundam serie werd het in het geheim gebouwd op Side 7. De Gundam zou de loop
+				van de oorlog ten gunste van de Aardse Federatie veranderen tijdens de Eenjarige Oorlog tegen het
+				Vorstendom Zeon. Het werd voornamelijk bestuurd door Amuro Ray.</p>
 			<a href="https://gundam.fandom.com/wiki/RX-78-2_Gundam" id="link">Meer info</a>
-		</article>
+		</section>
 	</main>
 
 	<script src="scripts/script.js"></script>
