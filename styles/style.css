@@ -39,27 +39,32 @@ button:not([disabled]) {
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+/* Gradient bron: https://cssgradient.io/ */
 
 :root {
   --bgFooter: #2b2b2b;
   --fontWhite: #eeeeee;
-  --fontBlack: #2b2b2b;
+  --fontBlack: #000000;
   --shadowBlack: #2b2b2b7e;
   --buttonBg: #276c9f;
-  --buttonBgPressed: #305979;
-  --buttonPointerPressed: #838383;
   --buttonBorder: #4a85b1 #4a85b1 #99a00f #5981a0;
-  --buttonBorderPressed: #376588 #376588 #0c0c01 #376588;
+  --buttonBgHover: #305979;
+  --buttonPointerHover: #838383;
+  --buttonBorderHover: #376588 #376588 #0c0c01 #376588;
+  --buttonBgActive: #e42323;
+  --buttonBorderActive: #ff6201 #e1850c #480303 #e42323;
   --link: #f3221b;
   --linkHover: #f3a71b;
   --linkActive: #7b5000;
   --zeroStateBg: #2b2b2bcd;
+  --spotlightKleur: #7da2d9c6;
+  --spotLightGeheel: drop-shadow(0em 0em 1.5em var(--spotlightKleur)) drop-shadow(0em 0em 1.5em var(--spotlightKleur));;
+  --dropShadow: drop-shadow(2em 0.5em 0.5em var(--shadowBlack));
+  --screenLightInset: inset 0 0 0.5em var(--fontWhite);
   --computerBgWarning: linear-gradient(0deg, rgba(253,29,29,1) 0%, rgba(255,172,169,1) 25%, rgba(253,29,29,1) 65%, rgba(252,176,69,1) 100%);
   --computerBgGradient: linear-gradient(0deg, rgba(205,200,64,1) 0%, rgba(82,197,246,1) 19%, rgba(61,135,167,1) 39%, rgba(39,108,159,1) 100%);
   --computerScreenBgGradient: linear-gradient(0deg, rgba(37,137,203,1) 0%, rgba(133,225,230,1) 55%, rgba(75,172,214,1) 84%, rgba(37,137,203,1) 100%);
 }
-
-/* Gradient bron: https://cssgradient.io/ */
 
 
 
@@ -75,6 +80,10 @@ p, a {
 
 h1, h2 {
   display: none;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: #ffc800 solid 0.1em;
 }
 
 
@@ -97,12 +106,11 @@ body {
 /* SCROLL BAR */
 /**************/
 
+/* Scroll bar stylen bron: https://css-tricks.com/almanac/properties/s/scrollbar/ */
 ::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
   visibility: hidden;
   width: 0;
 }
-
-/* Scroll bar stylen bron: https://css-tricks.com/almanac/properties/s/scrollbar/ */
 
 
 
@@ -149,10 +157,16 @@ header button {
   font-family: 'Sometype Mono', monospace;
 }
 
-header button:hover, header button:focus, header button:active {
-  background-color: var(--buttonBgPressed);
-  color: var(--buttonPointerPressed);
-  border-color: var(--buttonBorderPressed);
+header button:hover, header button:focus {
+  background-color: var(--buttonBgHover);
+  color: var(--buttonPointerHover);
+  border-color: var(--buttonBorderHover);
+}
+
+header button:active {
+  background-color: var(--buttonBgActive);
+  color: var(--fontWhite);  
+  border-color: var(--buttonBorderActive);
 }
 
 
@@ -162,7 +176,7 @@ header button:hover, header button:focus, header button:active {
 /* COMPUTERSCHERM */
 /******************/
 
-
+/* Custom curved border radius bron: https://9elements.github.io/fancy-border-radius/full-control.html */
 main div {
   background: var(--computerBgGradient);
   width: 19em;
@@ -171,7 +185,7 @@ main div {
   top: 5em;
   border-radius: 25% 25% 25% 25% / 12% 12% 0% 0%;
   border: solid 0.1em var(--fontWhite);
-  filter: drop-shadow(2em 2em 2em var(--shadowBlack));
+  filter: var(--dropShadow);
 }
 
 main div section:first-of-type ul {
@@ -182,7 +196,7 @@ main div section:first-of-type ul {
   width: 15.5em;
   height: 28em;
   margin: 1.5em 1.5em 1em 1.5em;
-  box-shadow: inset 0 0 0.5em var(--fontWhite);
+  box-shadow: var(--screenLightInset);
 }
 
 main div section:first-of-type ul li {
@@ -198,43 +212,9 @@ main div section:first-of-type ul li img {
 
 
 
-/***************************/
-/* MAIN COMPUTERSCHERM MENU*/
-/***************************/
-
-menu {
-  list-style: none;
-}
-
-main menu {
-  display: flex;
-  justify-content: center;
-}
-
-main menu button {
-  background-color: var(--buttonBg);
-  color: var(--fontWhite);
-  padding: 0.3em;
-  font-size: 2em;
-  margin: 0.5em 0.2em 6em 0.2em;
-  border-radius: 0.2em;
-  border-color: var(--buttonBorder);
-  border-width: 0.3em;
-  font-family: 'Sometype Mono', monospace;
-}
-
-main button:active, main button:hover, main button:focus {
-  background-color: var(--buttonBgPressed);
-  color: var(--buttonPointerPressed);
-  border-color: var(--buttonBorderPressed);
-}
-
-
-
-
-/**********************/
-/* COMPUTERSCHERM MENU*/
-/**********************/
+/********************************/
+/* ALLE MOBILE SUITS OP EEN RIJ */
+/********************************/
 
 main section:nth-last-of-type(2) ul {
 	display: flex;
@@ -267,6 +247,59 @@ main section:nth-last-of-type(2) img {
 main section:nth-last-of-type(2) button {
   background: none;
   border: none;
+}
+
+
+
+
+/******************************/
+/* COMPUTERSCHERM KNOPPEN MENU*/
+/******************************/
+
+/* Menu van knoppen */
+/* Knoppen menu bron: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menu */
+menu {
+  list-style: none;
+}
+
+main menu {
+  display: flex;
+  justify-content: center;
+}
+
+/* Knoppen navigatie menu */
+main menu button {
+  background-color: var(--buttonBg);
+  color: var(--fontWhite);
+  padding: 0.3em;
+  font-size: 2em;
+  margin: 0.5em 0.2em 6em 0.2em;
+  border-radius: 0.2em;
+  border-color: var(--buttonBorder);
+  border-width: 0.3em;
+  font-family: 'Sometype Mono', monospace;
+}
+
+/* Text icoon bron: https://coolsymbol.com/ */
+/* Content icoon vullen via CSS bron: https://developer.mozilla.org/en-US/docs/Web/CSS/content */
+main menu li:first-of-type button::before {
+  content: '◄';
+}
+
+main menu li:last-of-type button::before {
+  content: '►';
+}
+
+main button:hover, main button:focus {
+  background-color: var(--buttonBgHover);
+  color: var(--buttonPointerHover);
+  border-color: var(--buttonBorderHover);
+}
+
+main button:active {
+  background-color: var(--buttonBgActive);
+  color: var(--fontWhite);  
+  border-color: var(--buttonBorderActive);
 }
 
 
@@ -321,12 +354,25 @@ main section:nth-last-of-type(2) button {
   max-height: 2.5em;
 }
 
-.menuVisible button:hover, .menuVisible button:focus {
-  background-color: var(--buttonBgPressed);
-  color: var(--buttonPointerPressed);
-  border-color: var(--buttonBorderPressed);
+/* Extra info annuleer knop */
+/* Text icoon bron: https://coolsymbol.com/ */
+.menuVisible button::before {
+  content: '✖';
 }
 
+.menuVisible button:hover, .menuVisible button:focus {
+  background-color: var(--buttonBgHover);
+  color: var(--buttonPointerHover);
+  border-color: var(--buttonBorderHover);
+}
+
+.menuVisible button:active {
+  background-color: var(--buttonBgActive);
+  color: var(--fontWhite);  
+  border-color: var(--buttonBorderActive);
+}
+
+/* Toevoegen na JS button klik */
 .menuHidden {
   display: none;
 }
@@ -396,7 +442,12 @@ main section:nth-last-of-type(2) button {
   }
 }
 
-/* wanneer je op de MK II button klikt */
+/* wanneer je op de MK II JS button klikt */
 .easterEggAnimatie {
   animation: easterEggAnimatie 1.5s;
+}
+
+/* Wanneer een Mobile Suit in de highlight zit, dan gaat de spotlicht aan na JS button klik */
+.focusLight {
+  filter: var(--spotLightGeheel);
 }
